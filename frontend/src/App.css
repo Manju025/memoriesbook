@@ -1,0 +1,283 @@
+.App {
+  background-color: #101829;
+  min-height: 100vh;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 23px 60px;
+  background-color: #162138f5;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1040;
+  backdrop-filter: blur(7px);
+}
+
+.App-head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  height: 50px;
+}
+
+.App-title {
+  margin-top: 12px;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.7rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #4f8ef7, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.LongMenu {
+  display: none;
+}
+
+.App-btns {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.search-container {
+  background-color: #051028;
+  padding: 0px 7px;
+  border-radius: 5px;
+}
+
+.search-input {
+  padding: 5px 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  color: white;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search-container1 {
+  display: none;
+  padding: 0px 7px;
+  border-radius: 5px;
+}
+
+.search-input1 {
+  padding: 5px 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #051028;
+  font-size: 18px;
+  color: white;
+}
+
+.btn-app {
+  background-color: #283b65;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.fav-icon {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.camera-icon {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.container1 {
+  /* max-width: 100% !important; */
+  padding-top: 7%;
+  /* margin: 0px !important; */
+}
+
+.tabs-container {
+  margin-left: 60px;
+}
+
+.template {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 20px;
+  position: relative;
+  background-image: url("/public/template.png");
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 -170px 80px 0px rgba(0, 0, 0, 0.922);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  text-align: center;
+}
+
+.template-title {
+  font-size: 48px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 12px;
+  color: white;
+}
+
+.template-desc {
+  font-size: 28px;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 12px;
+  color: rgb(200, 192, 192);
+}
+
+.tab {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.tab:hover {
+  background-color: #13203f;
+  color: #2b0808;
+}
+
+.cal {
+  font-size: 25px;
+  font-weight: bold;
+  color: #2a27d6;
+}
+
+@media screen and (max-width: 1025px) {
+  .App-header {
+    padding: 20px 40px;
+    gap: 10px;
+  }
+
+  .App-title {
+    font-size: 32px;
+  }
+
+  .search-container {
+    gap: 2px;
+  }
+
+  .btn-app {
+    font-size: 16px;
+    padding: 4px 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .App-header {
+    flex-direction: row;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .App-title {
+    font-size: 28px;
+  }
+
+  .App-btns {
+    display: none;
+  }
+
+  .LongMenu {
+    display: block;
+  }
+
+  .search-container1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .search-input1 {
+    width: 100%;
+    animation: search-con-ani 0.3s ease-in-out;
+  }
+
+  @keyframes search-con-ani {
+    from {
+      opacity: 0;
+      transform: translatex(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translatex(0);
+    }
+  }
+
+  .btn-app {
+    font-size: 18px;
+    padding: 4px 8px;
+  }
+
+  .container1 {
+    padding-top: 10%;
+  }
+
+  .template {
+    height: 300px;
+    padding: 20px;
+    padding-top: 40px;
+  }
+
+  .template-title {
+    margin-top: 0px;
+    font-size: 32px;
+  }
+
+  .template-desc {
+    font-size: 20px;
+  }
+
+  .tabs-container {
+    margin-left: 20px;
+  }
+
+  .tab {
+    font-size: 14px;
+  }
+
+  .cal {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  
+  .search-input1 {
+    order: 1;
+    position: fixed;
+    top: 67px;
+    right: 28px;
+    width: 205px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,227 @@
+.about-container {
+  padding: 140px 60px 60px 60px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f1f5f9;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background elements for rich aesthetics */
+.about-container::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.15) 0%, transparent 60%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.about-container::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(79, 142, 247, 0.15) 0%, transparent 60%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 50px;
+  z-index: 1;
+}
+
+.about-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  font-family: "IBM Plex Sans", sans-serif;
+  letter-spacing: -1px;
+}
+
+.about-title .highlight {
+  background: linear-gradient(90deg, #4f8ef7, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+.about-subtitle {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 900px;
+  width: 100%;
+  z-index: 1;
+}
+
+.glass-panel {
+  background: rgba(25, 30, 60, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-panel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(79, 142, 247, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.section-icon {
+  font-size: 2.5rem;
+  color: #a78bfa;
+  margin-bottom: 20px;
+  opacity: 0.8;
+  display: inline-block;
+}
+
+.glass-panel h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.glass-panel p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #cbd5e1;
+  margin-bottom: 15px;
+  font-family: 'Inter', sans-serif;
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.tag-cloud span {
+  background: rgba(79, 142, 247, 0.1);
+  border: 1px solid rgba(79, 142, 247, 0.3);
+  color: #8bb4f9;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.tag-cloud span:hover {
+  background: rgba(79, 142, 247, 0.25);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(79, 142, 247, 0.3);
+}
+
+.developer-section .section-icon {
+  color: #4f8ef7;
+}
+
+.whisper-box {
+  margin-top: 35px;
+  padding: 25px;
+  background: linear-gradient(135deg, rgba(79, 142, 247, 0.05), rgba(167, 139, 250, 0.1));
+  border-radius: 15px;
+  border-left: 4px solid #a78bfa;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  position: relative;
+}
+
+.whisper-icon {
+  font-size: 1.8rem;
+  color: #a78bfa;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.whisper-icon-end {
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.05);
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.whisper-box p {
+  margin: 0;
+  color: #e2e8f0;
+  font-size: 1.1rem;
+}
+
+.whisper-box em {
+  color: #a78bfa;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #60a5fa, #c084fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+@media screen and (max-width: 768px) {
+  .about-container {
+    padding: 100px 20px 40px 20px;
+  }
+  
+  .about-title {
+    font-size: 2.5rem;
+  }
+  
+  .glass-panel {
+    padding: 25px;
+  }
+  
+  .whisper-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .whisper-icon {
+    margin-bottom: 15px;
+  }
+}
