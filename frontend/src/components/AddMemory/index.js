@@ -216,6 +216,7 @@ const AddMemory = ({ open, onClose, onMemoryAdded }) => {
             label="Creator"
             name="creator"
             variant="outlined"
+            required
             fullWidth
             value={formData.creator}
             onChange={handleChange}
@@ -248,7 +249,7 @@ const AddMemory = ({ open, onClose, onMemoryAdded }) => {
             rows={3}
             value={formData.message}
             onChange={handleChange}
-            placeholder="Describe this memory..."
+            placeholder="Describe this memory in atleast 35 words..."
             sx={inputStyles}
           />
 
@@ -259,6 +260,7 @@ const AddMemory = ({ open, onClose, onMemoryAdded }) => {
             name="date"
             type="date"
             variant="outlined"
+            required
             fullWidth
             value={formData.date}
             onChange={handleChange}
@@ -272,6 +274,7 @@ const AddMemory = ({ open, onClose, onMemoryAdded }) => {
             label="Tags"
             name="tags"
             variant="outlined"
+            required
             fullWidth
             value={formData.tags}
             onChange={handleChange}

@@ -38,3 +38,14 @@
 form{
   overflow-y: scroll;
 }
+
+form::-webkit-scrollbar{
+  width: 5px;
+  background-color: #101829;
+  border-radius: 5px;
+}
+
+form::-webkit-scrollbar-thumb{
+  background-color: #4f8ef7;
+  border-radius: 5px;
+}

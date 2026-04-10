@@ -9,7 +9,6 @@
   overflow: hidden;
 }
 
-/* Background elements for rich aesthetics */
 .about-container::before {
   content: '';
   position: absolute;
