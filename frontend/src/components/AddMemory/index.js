@@ -350,6 +350,7 @@ const AddMemory = ({ open, onClose, onMemoryAdded }) => {
             id="memory-submit-btn"
             type="submit"
             variant="contained"
+            disabled={submitting}
             sx={{
               background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)',
               color: '#fff',
