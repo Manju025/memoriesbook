@@ -32,6 +32,17 @@
     color: #d51983;
 }
 
+.card-creator-icon {
+    font-size: 13px;
+    color: #94a3b8;
+    margin: 0;
+    padding-top: 16px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+    font-weight: 500;
+    font-style: italic;
+    margin-top: auto;
+}
+
 .card-image {
     height: 250px;
     width: 100%;

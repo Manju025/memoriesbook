@@ -15,7 +15,7 @@ const Card = ({ image, title, date, tags, description, location, creator }) => {
             <p className='card-date'><CiCalendar />{date}</p>
             <p className="card-tags">{tags.map((tag, index) => <span key={index} className="card-tag">#{tag}</span>)}</p>
             <p className="card-description">{description}</p>
-            <p className="card-creator">Created by: {creator}</p>
+            <p className="card-creator"><CiUser className='card-creator-icon' /> {creator}</p>
         </div>
     </div>
   );

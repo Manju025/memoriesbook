@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CiHeart, CiCamera, CiSearch, CiCalendar } from "react-icons/ci";
+import { CiCamera, CiSearch, CiCalendar } from "react-icons/ci";
 import LongMenu from "./menu";
 import Cards from "./components/Cards";
 import Footer from "./components/Footer";
