@@ -85,7 +85,7 @@ const AddMemory = ({ open, onClose, onMemoryAdded }) => {
         tags: tagList,
       };
 
-      await axios.post("http://localhost:5000/memories", memory);
+      await axios.post("https://memoriesbook-hsa1.onrender.com/memories", memory);
       handleClear();
       onClose();
       if (onMemoryAdded) onMemoryAdded();

@@ -10,7 +10,7 @@ const Cards = ({ refreshTrigger, filterYear, searchQuery }) => {
   const fetchMemories = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get("http://localhost:5000/memories");
+      const { data } = await axios.get("https://memoriesbook-hsa1.onrender.com/memories");
       setMemories(data);
     } catch (err) {
       console.error("Error fetching memories:", err);
